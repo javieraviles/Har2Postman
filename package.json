@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "description": "Har to postman converter",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "test"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -23,7 +20,8 @@
     "url": "https://github.com/javieraviles/Har2Postman/issues"
   },
   "homepage": "https://github.com/javieraviles/Har2Postman#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jasmine": "^3.5.0"
   }
 }
