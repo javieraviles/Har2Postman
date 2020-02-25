@@ -1,0 +1,29 @@
+{
+  "name": "har2postman",
+  "version": "0.1.0",
+  "description": "Har to postman converter",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javieraviles/Har2Postman.git"
+  },
+  "keywords": [
+    "postman",
+    "har"
+  ],
+  "author": "Opensourcing team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javieraviles/Har2Postman/issues"
+  },
+  "homepage": "https://github.com/javieraviles/Har2Postman#readme",
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
