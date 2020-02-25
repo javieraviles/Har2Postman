@@ -16,5 +16,5 @@ The intended *audience* is, therefore, anybody who finds a use case where this l
 * There should be a test case ensuring this is working.
 
 ### v0.2.0 - Create simple postman test
-* The output file should also include basic test assertions for postman. Again the given input `/test/0.2.0/input.json` should produce the output `/test/0.2.0/output.json`.
+* The output file should also include basic test assertions for postman if `includeTest` option is selected. Again the given input `/test/0.2.0/input.json` should produce the output `/test/0.2.0/output.json`.
 * There should be a test case ensuring this is working.
