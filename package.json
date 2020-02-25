@@ -4,7 +4,7 @@
   "description": "Har to postman converter",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine JASMINE_CONFIG_PATH=./jasmine.json"
   },
   "repository": {
     "type": "git",
