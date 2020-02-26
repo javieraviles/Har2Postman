@@ -1,0 +1,16 @@
+name: CI
+on: [push]
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use node 10
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Install dependencies
+        run: npm install
+      - name: Run unit tests
+        run: npm test
