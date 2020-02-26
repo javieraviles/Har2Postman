@@ -22,4 +22,10 @@ Please note every version should include a suite of test cases ensuring new requ
 * The `createPostmanCollection` function should include a second optional `boolean` argument to decide whether the output should include the test section or not. By default, the behaviour of the boolean flag should be `false`.
 
 ### v0.3.0 - GET request might include query params
-* A GET request might include `query params`; those should also be mapped from the har file to the postman collection.
+* A GET request might include multiple `query params`; those should also be mapped from the har file to the postman collection. Evaluate whether they should be all included as part of the test.
+
+### Future features still to be planned
+* HAR could contain multiple requests and all them should be included in the postman collection
+* POST, PUT and DELETE methods possibly containing body should also be considered
+* Requests could include some way of authorization
+* Requests might include headers
