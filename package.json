@@ -23,5 +23,9 @@
   "dependencies": {},
   "devDependencies": {
     "jasmine": "^3.5.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }

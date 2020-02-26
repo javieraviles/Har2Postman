@@ -5,7 +5,7 @@ jobs:
     name: Run tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use node 10
         uses: actions/setup-node@v1
         with:
@@ -14,3 +14,36 @@ jobs:
         run: npm install
       - name: Run unit tests
         run: npm test
+
+  publish-npm:
+    needs: test
+    runs-on: ubuntu-latest
+    if: contains(github.ref, "release")
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use node 10
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  publish-gpr:
+    needs: test
+    runs-on: ubuntu-latest
+    if: contains(github.ref, "release")
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use node 10
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+          registry-url: https://npm.pkg.github.com/
+          scope: '@javieraviles'
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
