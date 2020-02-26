@@ -6,19 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Get post successfully",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "b914267e-9c05-4316-a127-d5f38ecc85c9",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
+			"name": "GET /posts/1",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -35,31 +23,7 @@
 						"1"
 					]
 				}
-			},
-			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "d6cf862a-c3d8-4bdb-b283-1823fc90be71",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "2fd4808f-414f-4438-99bf-f46cfdfee75b",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
 			}
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

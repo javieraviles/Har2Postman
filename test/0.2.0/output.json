@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Get post successfully",
+			"name": "GET /posts/1 successfully",
 			"event": [
 				{
 					"listen": "test",
@@ -42,31 +42,7 @@
 						"1"
 					]
 				}
-			},
-			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "d6cf862a-c3d8-4bdb-b283-1823fc90be71",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "2fd4808f-414f-4438-99bf-f46cfdfee75b",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
 			}
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
