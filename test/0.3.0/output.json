@@ -5,20 +5,20 @@
 	},
 	"item": [
 		{
-			"name": "GET /posts/1 successfully",
+			"name": "GET /posts with userId=1 successfully",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "b914267e-9c05-4316-a127-d5f38ecc85c9",
+						"id": "d7ed6c8b-e8eb-4cdf-bba0-aa386e3192af",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"pm.test(\"Fetched id is correct\", function () {",
+							"pm.test(\"Your test name\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.id).to.eql(1);",
+							"    pm.expect(jsonData[0].userId).to.eql(1);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -27,8 +27,9 @@
 			],
 			"request": {
 				"method": "GET",
+				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts/1",
+					"raw": "https://jsonplaceholder.typicode.com/posts?userId=1",
 					"protocol": "https",
 					"host": [
 						"jsonplaceholder",
@@ -36,8 +37,13 @@
 						"com"
 					],
 					"path": [
-						"posts",
-						"1"
+						"posts"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
 					]
 				}
 			}

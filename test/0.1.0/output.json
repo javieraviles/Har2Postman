@@ -1,6 +1,5 @@
 {
 	"info": {
-		"_postman_id": "59d18012-c522-4cfd-a21d-3b7e79749e2f",
 		"name": "Har2Postman",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -9,7 +8,6 @@
 			"name": "GET /posts/1",
 			"request": {
 				"method": "GET",
-				"header": [],
 				"url": {
 					"raw": "https://jsonplaceholder.typicode.com/posts/1",
 					"protocol": "https",
