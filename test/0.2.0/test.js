@@ -11,14 +11,26 @@ describe('Har2Postman', function () {
         expect(postmanCollection.item[0].event.length).toEqual(1);
     });
 
-    it('should generate postman script that asserts call with response -200-', function() {
+    it('should generate postman test that asserts call with response -200-', function() {
         var postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFile), true);
         var postmanCollection = JSON.parse(postmanContent);
         var itemEvent = postmanCollection.item[0].event[0];
         expect(itemEvent.listen).toEqual("test");
         expect(itemEvent.script.type).toEqual("text/javascript");
         expect(itemEvent.script).toBeDefined();
-        expect(itemEvent.script.exec.length).toEqual(3);
+        itemEvent.script.exec.map((e,i) => {
+            expect(e).toEqual(expectedPostmanCollection.item[0].event[0].script.exec[i]);
+        });
+    });
+
+    it('should also generate postman test that asserts the fetched object is correct', function() {
+        var postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFile), true);
+        var postmanCollection = JSON.parse(postmanContent);
+        var itemEvent = postmanCollection.item[0].event[0];
+        expect(itemEvent.listen).toEqual("test");
+        expect(itemEvent.script.type).toEqual("text/javascript");
+        expect(itemEvent.script).toBeDefined();
+        expect(itemEvent.script.exec.length).toEqual(7);
         itemEvent.script.exec.map((e,i) => {
             expect(e).toEqual(expectedPostmanCollection.item[0].event[0].script.exec[i]);
         });
