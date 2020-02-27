@@ -12,7 +12,7 @@ On the other hand `Postman` is a testing API client tool, allowing us to test a 
 
 The intended *audience* is, therefore, anybody who finds a use case where this library is useful in any way.
 
-## Getting Start
+## Getting Started
 
 ### Install package
 
@@ -33,6 +33,11 @@ harToPostman.createPostmanCollection(stringifiedHarFile, includeTests);
 
 - `includeTests`: default `false`, set to `true` for including test assertions in requests
 
+
+## Authors
+
+* **Rafael Paez** - [rafapaezbas](https://github.com/rafapaezbas)
+* **Javier Aviles** - [javieraviles](https://github.com/javieraviles)
 
 ## Roadmap
 Please note every version should include a suite of test cases ensuring new requirements are working. The last test case of the suite should check the library produces a `JSON` output matching the content of the file `/test/x.x.x/output.json` given a `JSON` input matching the content of the file `/test/x.x.x/input.json`.
@@ -55,3 +60,7 @@ Please note every version should include a suite of test cases ensuring new requ
 * Requests could include some way of authorization
 * Requests might include headers
 * Url hostname of requests, if common, should come from an env variable
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
