@@ -43,7 +43,7 @@ harToPostman.createPostmanCollection(stringifiedHarFile, includeTests);
 Please note every version should include a suite of test cases ensuring new requirements are working. The last test case of the suite should check the library produces a `JSON` output matching the content of the file `/test/x.x.x/output.json` given a `JSON` input matching the content of the file `/test/x.x.x/input.json`.
 
 ### v0.1.0 - Convert simplest GET request from HAR to Postman
-* Create a first basic JS `createPostmanCollection` function able to produce a valid postman collection including the expected `file` () and `item` (request itself) objects out of a `har` file.
+* Create a first basic JS `createPostmanCollection` function able to produce a valid postman collection including the expected `file` (postman metadata) and `item` (request itself) objects out of a `har` file.
 * Create a CI pipeline, executing jasmine tests on every push and updating the `Har2Postman` in npm if new tag is released.
 
 ### v0.2.0 - Create simple postman test for a GET request
@@ -52,14 +52,24 @@ Please note every version should include a suite of test cases ensuring new requ
 * Include basic usage example for the lib in docs
 
 ### v0.3.0 - GET request might include query params
-* A GET request might include multiple `query params`; those should also be mapped from the har file to the postman collection. Evaluate whether they should be all included as part of the test.
+* A GET request might include multiple `query params`; those should also be mapped from the har file to the postman collection. Evaluate whether some of them (FK?) should be included as part of the test assertions.
+
+### v0.4.0 - Support multiple requests within one har file
+* A `har` file can contain multiple requests, and all them should be contained within the swagger collection
+* The provided examples contain api versioning; the lib should be able to deal with them 
+
+### v0.5.0 - POST, PUT and DELETE methods should also be supported
+* Even though the method is already picked up by he lib, some methods such POST or PUT might include a body.
+* Some headers such `Content-Type` should be included in the request.
+
 
 ### Future features still to be planned
-* HAR could contain multiple requests and all them should be included in the postman collection
-* POST, PUT and DELETE methods possibly containing body should also be considered
+* Status codes other than 200 should be supported, and tests for them should be consistent (not checking id is correct for a 400 code)
 * Requests could include some way of authorization
-* Requests might include headers
+* Requests might include more useful headers
 * Url hostname of requests, if common, should come from an env variable
+* support `xml` format
+* when creating an object, might be interesting to save it's `id` if contained in response as env variable for future requests over same entity (GET, PUT or DELETE)
 
 ## License
 
