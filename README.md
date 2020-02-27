@@ -63,4 +63,4 @@ Please note every version should include a suite of test cases ensuring new requ
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
