@@ -70,6 +70,51 @@ Please note every version should include a suite of test cases ensuring new requ
 * Url hostname of requests, if common, should come from an env variable
 * support `xml` format
 * when creating an object, might be interesting to save it's `id` if contained in response as env variable for future requests over same entity (GET, PUT or DELETE)
+* Make sure every function generates only one type of data structure. F.e. this should be avoided: 
+
+```javascript
+var generateItem = function(){
+  var item = [{
+          name: generateItemName(harRequest.method, harRequestUrl.pathname, harResponse.status, generateTest),
+          event: generateItemEvent(harResponse, harRequestUrl),
+          request: {
+              method: harRequest.method,
+              url: {
+                  raw: harRequestUrl.toString(),
+                  protocol: harRequestUrl.protocol.slice(0, -1),
+                  host: harRequestUrl.hostname.split('.'),
+                  path: harPathnameArray.slice(1)
+              }
+          }
+      }];
+}
+
+```
+
+The right way for this function would be: 
+
+```javascript
+ var generateItem = function(){
+  return  [{
+          name: generateItemName(harRequest.method, harRequestUrl.pathname, harResponse.status, generateTest),
+          event: generateItemEvent(harResponse, harRequestUrl),
+          request: generateRequest(harRequest, harRequestUrl);
+      }];
+}
+
+var generateRequest = function(){
+  return {
+           method: harRequest.method,
+           url: generateUrl(harRequestUrl);
+         }
+}
+
+//var generateUrl = function() ...
+
+```
+
+**Also important** have a look at the functions returning arrays instead of objects, this will have to change in the future if those arrays need more than one element.
+
 
 ## License
 
