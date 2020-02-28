@@ -54,6 +54,7 @@ Please note every version should include a suite of test cases ensuring new requ
 ### v0.3.0 - GET request might include query params
 * A GET request might include multiple `query params`; those should also be mapped from the har file to the postman collection. Evaluate whether some of them (FK?) should be included as part of the test assertions.
 * CI pipeline should also include integration tests on tag relese: using the just released version of the lib, generate a postman collection using the version input, and run it with newman so it checks the lib output works out of the box.
+* Include ESLint, with some format scripts in the package and check the linting from the pipeline too
 
 ### v0.4.0 - Support multiple requests within one har file
 * A `har` file can contain multiple requests, and all them should be contained within the swagger collection

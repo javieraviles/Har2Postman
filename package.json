@@ -4,7 +4,9 @@
   "description": "Har to postman converter",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine JASMINE_CONFIG_PATH=./jasmine.json"
+    "test": "jasmine JASMINE_CONFIG_PATH=./jasmine.json",
+    "format:check": "npx eslint ./",
+    "format:fix": "npx eslint ./ --fix"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
   "homepage": "https://github.com/javieraviles/Har2Postman#readme",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
     "jasmine": "^3.5.0"
   },
   "directories": {
