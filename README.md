@@ -63,7 +63,7 @@ Please note every version should include a suite of test cases ensuring new requ
 * The provided examples contain api versioning; the lib should be able to deal with them 
 
 ### v0.4.5 - Any status code must be supported
-* Status code such as 200,204,400,401,403 or 404 must have specific assertions. 
+* Status code such as 200,  204, 400, 401, 403 or 404 must have specific assertions. 
 
 ### v0.5.0 - POST, PUT and DELETE methods should also be supported
 * Even though the method is already picked up by he lib, some methods such POST or PUT might include a body.
