@@ -3,6 +3,8 @@ describe('Har2Postman', () => {
   const fs = require('fs');
   const harFile = JSON.parse(fs.readFileSync(__dirname + '/input.json', 'utf8'));
   const expectedPostmanCollection = JSON.parse(fs.readFileSync(__dirname + '/output.json', 'utf8'));
+  const postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFile));
+  const postmanCollection = JSON.parse(postmanContent);
 
   it('Throws an error given a non JSON string as entry', () => {
     const postmanContent = harToPostman.createPostmanCollection('any non json argument');
@@ -10,21 +12,15 @@ describe('Har2Postman', () => {
   });
 
   it('Generates info section for postman collection', () => {
-    const postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFile));
-    const postmanCollection = JSON.parse(postmanContent);
     expect(postmanCollection.info.name).toEqual('Har2Postman');
     expect(postmanCollection.info.schema).toEqual('https://schema.getpostman.com/json/collection/v2.1.0/collection.json');
   });
 
   it('Generates an item in the output with a name composed out of method + url pathname', () => {
-    const postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFile));
-    const postmanCollection = JSON.parse(postmanContent);
     expect(postmanCollection.item[0].name).toEqual('GET /posts/1');
   });
 
   it('Generates an item in the output with a request containing GET method and a valid url object', () => {
-    const postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFile));
-    const postmanCollection = JSON.parse(postmanContent);
     expect(postmanCollection.item[0].request.method).toEqual('GET');
     expect(postmanCollection.item[0].request.url).toEqual(
         {
@@ -37,8 +33,6 @@ describe('Har2Postman', () => {
   });
 
   it('Generates 0.1.0 output json (postman) given the 0.1.0 input json (har)', () => {
-    const postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFile));
-    const postmanCollection = JSON.parse(postmanContent);
     expect(expectedPostmanCollection).toEqual(postmanCollection);
   });
 });
