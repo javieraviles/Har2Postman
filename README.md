@@ -59,6 +59,7 @@ Please note every version should include a suite of test cases ensuring new requ
 * Include ESLint, with some format scripts in the package and check the linting from the pipeline too
 
 ### v0.4.0 - Support multiple requests within one har file
+* Any status code must be supported.
 * A `har` file can contain multiple requests, and all them should be contained within the swagger collection
 * The provided examples contain api versioning; the lib should be able to deal with them 
 
