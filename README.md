@@ -53,12 +53,17 @@ Please note every version should include a suite of test cases ensuring new requ
 
 ### v0.3.0 - GET request might include query params
 * A GET request might include multiple `query params`; those should also be mapped from the har file to the postman collection. Evaluate whether some of them (FK?) should be included as part of the test assertions.
-* CI pipeline should also include integration tests on tag relese: using the just released version of the lib, generate a postman collection using the version input, and run it with newman so it checks the lib output works out of the box.
+* Evaluate if response is an array, if so, generate test assertion.
+* Evaluate if response is not a json file, if so generate only status code assertion.
+* CI pipeline should also include integration tests on tag release: using the just released version of the lib, generate a postman collection using the version input, and run it with newman so it checks the lib output works out of the box.
 * Include ESLint, with some format scripts in the package and check the linting from the pipeline too
 
 ### v0.4.0 - Support multiple requests within one har file
 * A `har` file can contain multiple requests, and all them should be contained within the swagger collection
 * The provided examples contain api versioning; the lib should be able to deal with them 
+
+### v0.4.5 - Any status code must be supported
+* Status code such as 200,  204, 400, 401, 403 or 404 must have specific assertions. 
 
 ### v0.5.0 - POST, PUT and DELETE methods should also be supported
 * Even though the method is already picked up by he lib, some methods such POST or PUT might include a body.
