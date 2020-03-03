@@ -6,7 +6,7 @@ const postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFi
 const postmanCollection = JSON.parse(postmanContent);
 
 it('Generates multiple items for the same collection', () => {
-  expect(postmanCollection.item.length).not.toBeLessThan(2);
+  expect(postmanCollection.item.length).not.toBeLessThan(3);
 });
 
 it('Generates 0.4.0 output json (postman) given the 0.4.0 input json (har)', () => {

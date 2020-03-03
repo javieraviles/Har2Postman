@@ -62,12 +62,13 @@ Please note every version should include a suite of test cases ensuring new requ
 * A `har` file can contain multiple requests, and all them should be contained within the swagger collection
 * The provided examples contain api versioning; the lib should be able to deal with them 
 
-### v0.4.5 - Any status code must be supported
-* Status code such as 200,  204, 400, 401, 403 or 404 must have specific assertions. 
-
 ### v0.5.0 - POST, PUT and DELETE methods should also be supported
-* Even though the method is already picked up by he lib, some methods such POST or PUT might include a body.
+* Even though the method is already picked up by the lib, some methods such POST or PUT might include a body.
 * Some headers such `Content-Type` should be included in the request.
+
+### v0.6.0 - Any status code must be supported
+* Status code such as 200, 204, 400, 401, 403 or 404 must have specific assertions. 
+
 
 
 ### Future features still to be planned
