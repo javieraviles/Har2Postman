@@ -5,7 +5,7 @@
 	},
 	"item": [
 		{
-			"name": "GET /pet/1",
+			"name": "GET /v2/pet/1 successfully",
 			"event": [
 				{
 					"listen": "test",
@@ -14,7 +14,6 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"",
 							"pm.test(\"Fetched object should be the expected one\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.id).to.eql(1);",
@@ -43,7 +42,7 @@
 			}
 		},
 		{
-			"name": "GET /pet/2",
+			"name": "GET /v2/pet/2 successfully",
 			"event": [
 				{
 					"listen": "test",
@@ -52,7 +51,6 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"",
 							"pm.test(\"Fetched object should be the expected one\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.id).to.eql(2);",
@@ -81,7 +79,7 @@
 			}
 		},
 		{
-			"name": "GET /pet/3",
+			"name": "GET /v2/pet/3 successfully",
 			"event": [
 				{
 					"listen": "test",
@@ -90,7 +88,6 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"",
 							"pm.test(\"Fetched object should be the expected one\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.id).to.eql(3);",
