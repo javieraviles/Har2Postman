@@ -554,9 +554,10 @@
           ],
           "cookies": [],
           "content": {
-            "size": 0,
-            "mimeType": "application/json",
-            "compression": 0
+            "size": 147,
+            "mimeType": "some-non-json-type",
+            "compression": 0,
+            "text": "some-non-json-content"
           },
           "redirectURL": "",
           "headersSize": 171,

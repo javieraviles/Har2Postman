@@ -6,7 +6,11 @@ const postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFi
 const postmanCollection = JSON.parse(postmanContent);
 
 describe('Har2Postman', () => {
-    it('Generates 0.6.0 output json (postman) given the 0.6.0 input json (har)', () => {
-        expect(expectedPostmanCollection).toEqual(postmanCollection);
-    });
+  it('Should be able to ignore non-json contents in response', () => {
+    expect(postmanCollection.item[3].event[0].script.exec.length).toEqual(3);
+  });
+
+  it('Generates 0.6.0 output json (postman) given the 0.6.0 input json (har)', () => {
+    expect(expectedPostmanCollection).toEqual(postmanCollection);
+  });
 });
