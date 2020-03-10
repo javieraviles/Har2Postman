@@ -1,0 +1,136 @@
+{
+	"info": {
+		"name": "Har2Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /v2/5e66d5e23100007b002305d2 ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://www.mocky.io/v2/5e66d5e23100007b002305d2",
+					"protocol": "http",
+					"host": [
+						"www",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v2",
+						"5e66d5e23100007b002305d2"
+					]
+				}
+			}
+		},
+		{
+			"name": "GET /v2/5e66d5963100008e002305ce ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 202\", function () {",
+							"    pm.response.to.have.status(202);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://www.mocky.io/v2/5e66d5963100008e002305ce",
+					"protocol": "http",
+					"host": [
+						"www",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v2",
+						"5e66d5963100008e002305ce"
+					]
+				}
+			}
+		},
+		{
+			"name": "GET /v2/5e66d5613100005c002305cd ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://www.mocky.io/v2/5e66d5613100005c002305cd",
+					"protocol": "http",
+					"host": [
+						"www",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v2",
+						"5e66d5613100005c002305cd"
+					]
+				}
+			}
+		},
+		{
+			"name": "GET /v2/5e66d5b431000073002305cf ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://www.mocky.io/v2/5e66d5b431000073002305cf",
+					"protocol": "http",
+					"host": [
+						"www",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v2",
+						"5e66d5b431000073002305cf"
+					]
+				}
+			}
+		}
+	]
+}
