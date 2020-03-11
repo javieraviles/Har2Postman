@@ -5,7 +5,7 @@
 	},
 	"item": [
 		{
-			"name": "GET /v2/5e66d5e23100007b002305d2 ",
+			"name": "GET /v2/5e66d5e23100007b002305d2 forbidden",
 			"event": [
 				{
 					"listen": "test",
@@ -37,7 +37,7 @@
 			}
 		},
 		{
-			"name": "GET /v2/5e66d5963100008e002305ce ",
+			"name": "GET /v2/5e66d5963100008e002305ce accepted",
 			"event": [
 				{
 					"listen": "test",
@@ -69,7 +69,7 @@
 			}
 		},
 		{
-			"name": "GET /v2/5e66d5613100005c002305cd ",
+			"name": "GET /v2/5e66d5613100005c002305cd created",
 			"event": [
 				{
 					"listen": "test",
@@ -101,7 +101,7 @@
 			}
 		},
 		{
-			"name": "GET /v2/5e66d5b431000073002305cf ",
+			"name": "GET /v2/5e66d5b431000073002305cf no-content",
 			"event": [
 				{
 					"listen": "test",
