@@ -1,0 +1,55 @@
+{
+	"info": {
+		"name": "Har2Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /v2/pet successfully",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				  "header": [
+              {
+                  "key": "Content-Type",
+                  "value": "application/json"
+					    }
+          ],
+          "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"category-name-placeholder\"\n  },\n  \"name\": \"name-placeholder\",\n  \"photoUrls\": [\n    \"url-placeholder-1\",\n    \"url-placeholder-2\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"tag-name-placeholder\"\n    }\n  ],\n  \"status\": \"status-placeholder\"\n}",
+              "options": {
+                  "raw": {
+                      "language": "json"
+                  }
+              }
+          },
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			}
+		}
+	]
+}

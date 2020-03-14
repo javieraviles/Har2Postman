@@ -1,0 +1,483 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "WebInspector",
+      "version": "537.36"
+    },
+    "pages": [],
+    "entries": [
+      {
+        "startedDateTime": "2020-03-14T11:17:00.491Z",
+        "time": 530.6520000027036,
+        "request": {
+          "method": "POST",
+          "url": "https://petstore.swagger.io/v2/pet",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "petstore.swagger.io"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Content-Length",
+              "value": "303"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Origin",
+              "value": "https://petstore.swagger.io"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-origin"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Referer",
+              "value": "https://petstore.swagger.io/"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            },
+            {
+              "name": "Cookie",
+              "value": "_ga=GA1.2.1272499832.1542787221; _mkto_trk=id:800-TIV-782&token:_mch-swagger.io-1542787221065-15135; mp_658a1e29c182c99ac13375c67654fffc_mixpanel=%7B%22distinct_id%22%3A%20%22169d825146923e-0d2bf608bcaa28-7a1437-15f900-169d825146a79b%22%2C%22%24device_id%22%3A%20%22169d825146923e-0d2bf608bcaa28-7a1437-15f900-169d825146a79b%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fswagger.io%2Ftools%2Fswagger-inspector%2F%22%2C%22%24initial_referring_domain%22%3A%20%22swagger.io%22%7D; _ceir=1; bf_lead=17kb5uhb9dno00"
+            }
+          ],
+          "queryString": [],
+          "cookies": [
+            {
+              "name": "_ga",
+              "value": "GA1.2.1272499832.1542787221",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            },
+            {
+              "name": "_mkto_trk",
+              "value": "id:800-TIV-782&token:_mch-swagger.io-1542787221065-15135",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            },
+            {
+              "name": "mp_658a1e29c182c99ac13375c67654fffc_mixpanel",
+              "value": "%7B%22distinct_id%22%3A%20%22169d825146923e-0d2bf608bcaa28-7a1437-15f900-169d825146a79b%22%2C%22%24device_id%22%3A%20%22169d825146923e-0d2bf608bcaa28-7a1437-15f900-169d825146a79b%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fswagger.io%2Ftools%2Fswagger-inspector%2F%22%2C%22%24initial_referring_domain%22%3A%20%22swagger.io%22%7D",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            },
+            {
+              "name": "_ceir",
+              "value": "1",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            },
+            {
+              "name": "bf_lead",
+              "value": "17kb5uhb9dno00",
+              "expires": null,
+              "httpOnly": false,
+              "secure": false
+            }
+          ],
+          "headersSize": 1027,
+          "bodySize": 303,
+          "postData": {
+            "mimeType": "application/json",
+            "text": "{\n  \"id\": 1,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"category-name-placeholder\"\n  },\n  \"name\": \"name-placeholder\",\n  \"photoUrls\": [\n    \"url-placeholder-1\",\n    \"url-placeholder-2\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"tag-name-placeholder\"\n    }\n  ],\n  \"status\": \"status-placeholder\"\n}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Sat, 14 Mar 2020 11:17:00 GMT"
+            },
+            {
+              "name": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "name": "Access-Control-Allow-Methods",
+              "value": "GET, POST, DELETE, PUT"
+            },
+            {
+              "name": "Access-Control-Allow-Headers",
+              "value": "Content-Type, api_key, Authorization"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Connection",
+              "value": "close"
+            },
+            {
+              "name": "Server",
+              "value": "Jetty(9.2.9.v20150224)"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "size": 221,
+            "mimeType": "application/json",
+            "compression": 0,
+            "text": "{\"id\":1,\"category\":{\"id\":1,\"name\":\"category-name-placeholder\"},\"name\":\"name-placeholder\",\"photoUrls\":[\"url-placeholder-1\",\"url-placeholder-2\"],\"tags\":[{\"id\":1,\"name\":\"tag-name-placeholder\"}],\"status\":\"status-placeholder\"}"
+          },
+          "redirectURL": "",
+          "headersSize": 293,
+          "bodySize": 221,
+          "_transferSize": 514
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 1.4770000014668332,
+          "dns": 17.898999999999997,
+          "ssl": 244.659,
+          "connect": 383.332,
+          "send": 0.3340000000000032,
+          "wait": 125.46600000301191,
+          "receive": 2.143999998224899,
+          "_blocked_queueing": 0.950000001466833
+        },
+        "serverIPAddress": "23.22.16.221",
+        "_initiator": {
+          "type": "script",
+          "stack": {
+            "callFrames": [
+              {
+                "functionName": "",
+                "scriptId": "5",
+                "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                "lineNumber": 5,
+                "columnNumber": 25500
+              },
+              {
+                "functionName": "c",
+                "scriptId": "5",
+                "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                "lineNumber": 78,
+                "columnNumber": 64148
+              },
+              {
+                "functionName": "",
+                "scriptId": "5",
+                "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                "lineNumber": 78,
+                "columnNumber": 63936
+              },
+              {
+                "functionName": "e.<computed>",
+                "scriptId": "5",
+                "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                "lineNumber": 78,
+                "columnNumber": 64570
+              },
+              {
+                "functionName": "o",
+                "scriptId": "5",
+                "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                "lineNumber": 50,
+                "columnNumber": 59060
+              },
+              {
+                "functionName": "s",
+                "scriptId": "5",
+                "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                "lineNumber": 50,
+                "columnNumber": 59258
+              }
+            ],
+            "parent": {
+              "description": "Promise.then",
+              "callFrames": [
+                {
+                  "functionName": "o",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 59125
+                },
+                {
+                  "functionName": "s",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 59258
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 59317
+                },
+                {
+                  "functionName": "t",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 13475
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 59205
+                },
+                {
+                  "functionName": "V",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 24739
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 67240
+                },
+                {
+                  "functionName": "Mn.execute",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 67748
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 12118
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 0,
+                  "columnNumber": 60250
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 29160
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 70,
+                  "columnNumber": 12474
+                },
+                {
+                  "functionName": "r",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 132,
+                  "columnNumber": 71811
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 132,
+                  "columnNumber": 75753
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 12707
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 0,
+                  "columnNumber": 60250
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 29160
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 70,
+                  "columnNumber": 19057
+                },
+                {
+                  "functionName": "r",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 132,
+                  "columnNumber": 71811
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 132,
+                  "columnNumber": 75753
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 132,
+                  "columnNumber": 140688
+                },
+                {
+                  "functionName": "o",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 89581
+                },
+                {
+                  "functionName": "s",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 87782
+                },
+                {
+                  "functionName": "executeDispatchesInOrder",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 88511
+                },
+                {
+                  "functionName": "p",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 35271
+                },
+                {
+                  "functionName": "h",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 35397
+                },
+                {
+                  "functionName": "e.exports",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 70,
+                  "columnNumber": 113963
+                },
+                {
+                  "functionName": "processEventQueue",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 36789
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 78,
+                  "columnNumber": 134576
+                },
+                {
+                  "functionName": "handleTopLevel",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 78,
+                  "columnNumber": 134598
+                },
+                {
+                  "functionName": "h",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 78,
+                  "columnNumber": 156571
+                },
+                {
+                  "functionName": "perform",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 50,
+                  "columnNumber": 50562
+                },
+                {
+                  "functionName": "batchedUpdates",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 78,
+                  "columnNumber": 156053
+                },
+                {
+                  "functionName": "batchedUpdates",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 5,
+                  "columnNumber": 71259
+                },
+                {
+                  "functionName": "dispatchEvent",
+                  "scriptId": "5",
+                  "url": "https://petstore.swagger.io/swagger-ui-bundle.js",
+                  "lineNumber": 78,
+                  "columnNumber": 157352
+                }
+              ]
+            }
+          }
+        },
+        "_priority": "High",
+        "_resourceType": "fetch",
+        "connection": "2841"
+      }
+    ]
+  }
+}
