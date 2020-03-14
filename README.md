@@ -67,12 +67,12 @@ Please note every version should include a suite of test cases ensuring new requ
 * Some headers such `Content-Type` should be included in the request.
 
 ### v0.6.0 - Any status code must be supported
-* Status code such as 200, 204, 400, 401, 403 or 404 must have specific assertions. 
+* Status code such as 200, 204, 400, 401, 403 or 404 must have specific assertions.
+* Non-json responses should even not tried to be analysed
 
 
 
 ### Future features still to be planned
-* Status codes other than 200 should be supported, and tests for them should be consistent (not checking id is correct for a 400 code)
 * Requests could include some way of authorization
 * Requests might include more useful headers
 * Url hostname of requests, if common, should come from an env variable

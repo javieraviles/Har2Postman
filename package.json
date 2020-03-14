@@ -1,6 +1,6 @@
 {
   "name": "har2postman",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Har to postman converter",
   "main": "index.js",
   "scripts": {
