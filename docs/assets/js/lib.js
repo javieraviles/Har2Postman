@@ -113,26 +113,23 @@ const generateQueryParams = (queryString) => {
 };
 
 const generateItemRequestHeaders = (harRequestHeaders, requestHasBody) => {
-  const relevantHarHeaders = [];
+  const relevantHarHeaders = ['Authorization', 'Proxy-Authorization'];
   if (requestHasBody) {
     relevantHarHeaders.push('Content-Type');
   }
-  return filterAndRenameRelevantHeaders(harRequestHeaders, relevantHarHeaders);
+  const itemRequestHeaders = [];
+  harRequestHeaders.filter((h) => contains(relevantHarHeaders, h.name)).map((h) => {
+    itemRequestHeaders.push(generateItemRequestHeader(h));
+  });
+
+  return itemRequestHeaders;
 };
 
-const filterAndRenameRelevantHeaders = (harRequestHeaders, relevantHarHeaders) => {
-  const itemRequestHeaders = [];
-  relevantHarHeaders.map((relevantHeader) => {
-    const newItemRequestHeader = harRequestHeaders.find((header) => header.name === relevantHeader);
-    if (newItemRequestHeader != undefined) {
-      itemRequestHeaders.push(newItemRequestHeader);
-    }
-  });
-  itemRequestHeaders.forEach((header) => {
-    header.key = header.name;
-    delete header.name;
-  });
-  return itemRequestHeaders;
+const generateItemRequestHeader = (harRequestHeader) => {
+  const itemRequestHeader = {};
+  itemRequestHeader.key = harRequestHeader.name;
+  itemRequestHeader.value = harRequestHeader.value;
+  return itemRequestHeader;
 };
 
 const generateItemRequestBody = (requestBody) => {
@@ -193,4 +190,8 @@ const getIdFromUrl = (harRequestUrl) => {
   const harPathnameArray = harRequestUrl.pathname.split('/');
   const lastPathObject = harPathnameArray[harPathnameArray.length - 1];
   return parseInt(lastPathObject);
+};
+
+const contains = (array, value) => {
+  return array.indexOf(value) != -1;
 };
