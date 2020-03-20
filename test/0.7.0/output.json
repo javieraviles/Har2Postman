@@ -5,7 +5,51 @@
 	},
 	"item": [
 		{
-			"name": "POST /v2/pet successfully",
+			"name": "GET /public-api/users successfully",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer GycBk4kyvJYJWcIV33YwdR5yPXi7WeXtKqmY"
+					}
+				],
+				"url": {
+					"raw": "https://gorest.co.in/public-api/users?first_name=john",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public-api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "john"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "POST /public-api/users successfully",
 			"event": [
 				{
 					"listen": "test",
@@ -21,32 +65,36 @@
 			],
 			"request": {
 				"method": "POST",
-				  "header": [
-              {
-                  "key": "Content-Type",
-                  "value": "application/json"
-					    }
-          ],
-          "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": 1,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"category-name-placeholder\"\n  },\n  \"name\": \"name-placeholder\",\n  \"photoUrls\": [\n    \"url-placeholder-1\",\n    \"url-placeholder-2\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"tag-name-placeholder\"\n    }\n  ],\n  \"status\": \"status-placeholder\"\n}",
-              "options": {
-                  "raw": {
-                      "language": "json"
-                  }
-              }
-          },
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer GycBk4kyvJYJWcIV33YwdR5yPXi7WeXtKqmY"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"first_name\":\"Brian\",\"last_name\":\"Ratke\",\"gender\":\"male\",\"email\":\"lew19@roberts.com\",\"status\":\"active\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://petstore.swagger.io/v2/pet",
+					"raw": "https://gorest.co.in/public-api/users",
 					"protocol": "https",
 					"host": [
-						"petstore",
-						"swagger",
-						"io"
+						"gorest",
+						"co",
+						"in"
 					],
 					"path": [
-						"v2",
-						"pet"
+						"public-api",
+						"users"
 					]
 				}
 			}

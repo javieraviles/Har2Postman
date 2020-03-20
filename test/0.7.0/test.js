@@ -6,7 +6,9 @@ const postmanContent = harToPostman.createPostmanCollection(JSON.stringify(harFi
 const postmanCollection = JSON.parse(postmanContent);
 
 describe('Har2Postman', () => {
-  it('Should include a json body in a POST request', () => {
+  it('includes Authorization header within the request\'s headers', () => {
+    expect(postmanCollection.item[0].request.header[0].key).toEqual('Authorization');
+    expect(postmanCollection.item[0].request.header[0].value).toEqual('Bearer GycBk4kyvJYJWcIV33YwdR5yPXi7WeXtKqmY');
   });
 
   it('Generates 0.7.0 output json (postman) given the 0.7.0 input json (har)', () => {

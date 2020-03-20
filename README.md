@@ -1,7 +1,9 @@
 # Har2Postman
 [![npm version](https://badge.fury.io/js/har2postman.svg)](https://badge.fury.io/js/har2postman)
 
-Javascript Har to Postman converter. *THIS PROJECT IS RIGHT NOW UNDER HEAVY DEVELOPMENT*
+![Har2Postman](https://raw.githubusercontent.com/javieraviles/har2postman/master/docs/assets/img/logo.png) 
+
+Javascript Har to Postman converter. [Try it out](https://javieraviles.github.io/Har2Postman/)
 
 ## Purpose
 The main goal of the project is the creation of a JS library to convert `.har` files to Postman requests/collection in `.JSON` format.
@@ -70,11 +72,11 @@ Please note every version should include a suite of test cases ensuring new requ
 * Status code such as 200, 204, 400, 401, 403 or 404 must have specific assertions.
 * Non-json responses should even not tried to be analysed
 
-
+### v0.7.0 - Relevant headers should be included
+* Authorization methods should be supported including headers
+* Every other useful header should be included too
 
 ### Future features still to be planned
-* Requests could include some way of authorization
-* Requests might include more useful headers
 * Url hostname of requests, if common, should come from an env variable
 * support `xml` format
 * when creating an object, might be interesting to save it's `id` if contained in response as env variable for future requests over same entity (GET, PUT or DELETE)
