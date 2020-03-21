@@ -74,12 +74,14 @@ Please note every version should include a suite of test cases ensuring new requ
 
 ### v0.7.0 - Relevant headers should be included
 * Include relevant headers for each request, only the necessary ones.
+* Bundle the lib for the demo page automatically when releasing new version (browserify?)
 
 ### Future features still to be planned
 * Url hostname of requests, if common, should come from an env variable
 * Auth methods should not be included as simple headers, but collection auth method and inherit from there in every request
 * support `xml` format
 * when creating an object, might be interesting to save it's `id` if contained in response as env variable for future requests over same entity (GET, PUT or DELETE)
+* Prepare nice docs
 * Make sure every function generates only one type of data structure. F.e. this should be avoided: 
 
 ```javascript

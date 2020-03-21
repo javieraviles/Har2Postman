@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jasmine JASMINE_CONFIG_PATH=./jasmine.json",
     "format:check": "npx eslint ./",
-    "format:fix": "npx eslint ./ --fix"
+    "format:fix": "npx eslint ./ --fix",
+    "browserify": "npx browserify ./lib/har-to-postman.js --standalone har-to-postman > ./docs/assets/js/lib.js",
+    "build": "npm test && npm run format:fix && npm run browserify"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "homepage": "https://github.com/javieraviles/Har2Postman#readme",
   "dependencies": {},
   "devDependencies": {
+    "browserify": "^16.5.0",
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
     "jasmine": "^3.5.0"
