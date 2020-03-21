@@ -73,11 +73,11 @@ Please note every version should include a suite of test cases ensuring new requ
 * Non-json responses should even not tried to be analysed
 
 ### v0.7.0 - Relevant headers should be included
-* Authorization methods should be supported including headers
-* Every other useful header should be included too
+* Include relevant headers for each request, only the necessary ones.
 
 ### Future features still to be planned
 * Url hostname of requests, if common, should come from an env variable
+* Auth methods should not be included as simple headers, but collection auth method and inherit from there in every request
 * support `xml` format
 * when creating an object, might be interesting to save it's `id` if contained in response as env variable for future requests over same entity (GET, PUT or DELETE)
 * Make sure every function generates only one type of data structure. F.e. this should be avoided: 
