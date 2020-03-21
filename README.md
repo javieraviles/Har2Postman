@@ -51,18 +51,18 @@ Please note every version should include a suite of test cases ensuring new requ
 ### v0.2.0 - Create simple postman test for a GET request
 * The output file should also include basic test assertions in GET requests for postman based on the response section from `har` file (response code, maybe id if path param?).
 * The `createPostmanCollection` function should include a second optional `boolean` argument to decide whether the output should include the test section or not. By default, the behaviour of the boolean flag should be `false`.
-* Include basic usage example for the lib in docs
+* Include basic usage example for the lib in docs.
 
 ### v0.3.0 - GET request might include query params
 * A GET request might include multiple `query params`; those should also be mapped from the har file to the postman collection. Evaluate whether some of them (FK?) should be included as part of the test assertions.
 * Evaluate if response is an array, if so, generate test assertion.
 * Evaluate if response is not a json file, if so generate only status code assertion.
 * CI pipeline should also include integration tests on tag release: using the just released version of the lib, generate a postman collection using the version input, and run it with newman so it checks the lib output works out of the box.
-* Include ESLint, with some format scripts in the package and check the linting from the pipeline too
+* Include ESLint, with some format scripts in the package and check the linting from the pipeline too.
 
 ### v0.4.0 - Support multiple requests within one har file
-* A `har` file can contain multiple requests, and all them should be contained within the swagger collection
-* The provided examples contain api versioning; the lib should be able to deal with them 
+* A `har` file can contain multiple requests, and all them should be contained within the swagger collection.
+* The provided examples contain api versioning; the lib should be able to deal with them.
 
 ### v0.5.0 - POST, PUT and DELETE methods should also be supported
 * Even though the method is already picked up by the lib, some methods such POST or PUT might include a body.
@@ -70,11 +70,12 @@ Please note every version should include a suite of test cases ensuring new requ
 
 ### v0.6.0 - Any status code must be supported
 * Status code such as 200, 204, 400, 401, 403 or 404 must have specific assertions.
-* Non-json responses should even not tried to be analysed
+* Non-json responses should even not tried to be analysed.
 
 ### v0.7.0 - Relevant headers should be included
 * Include relevant headers for each request, only the necessary ones.
-* Bundle the lib for the demo page automatically when releasing new version (browserify?)
+* Make library compatible for Browser.
+* Demo page automatically getting lib from cdn.
 
 ### Future features still to be planned
 * Url hostname of requests, if common, should come from an env variable

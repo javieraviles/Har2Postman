@@ -9,8 +9,7 @@ globals:
   SharedArrayBuffer: readonly
 parserOptions:
   ecmaVersion: 2018
-ignorePatterns: 
-  - "docs/"
+ignorePatterns:
   - node_modules/"
 rules:
   max-len: ["error", { "code": 125 }]

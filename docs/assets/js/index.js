@@ -21,7 +21,7 @@ const createReader = () => {
 };
 
 const createOutputFile = (inputFile) => {
-  return harToPostman.createPostmanCollection(inputFile, true);
+  return HarToPostman.createPostmanCollection(inputFile, true);
 };
 
 const createJsonFile = (outputFile) => {
