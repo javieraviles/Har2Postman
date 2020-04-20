@@ -1,8 +1,11 @@
 {
   "name": "har2postman",
-  "version": "0.7.0",
+  "version": "0.7.5",
   "description": "Har to postman converter",
   "main": "index.js",
+  "bin": {
+    "har2postman": "./bin/index.js"
+    },
   "scripts": {
     "test": "jasmine JASMINE_CONFIG_PATH=./jasmine.json",
     "format:check": "npx eslint ./",
