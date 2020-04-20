@@ -77,6 +77,9 @@ Please note every version should include a suite of test cases ensuring new requ
 * Make library compatible for Browser.
 * Demo page automatically getting lib from cdn.
 
+### v0.7.5 - Add cli execution
+* Include the option for converting a har file into a collection from the command line.
+
 ### Future features still to be planned
 * Url hostname of requests, if common, should come from an env variable
 * Auth methods should not be included as simple headers, but collection auth method and inherit from there in every request
